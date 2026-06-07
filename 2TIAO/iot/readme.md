@@ -12,20 +12,20 @@
 
 # Space Agro Analytics - Módulo IoT (Telemetria de Solo)
 
-## Grupo [Nome do seu Grupo]
+## Grupo - Grupo S
 
 ## 👨‍🎓 Integrantes: 
-- <a href="https://www.linkedin.com/in/seu-linkedin/">Mateus Penteado</a>
-- <a href="#">[Nome do integrante 2]</a>
-- <a href="#">[Nome do integrante 3]</a> 
-- <a href="#">[Nome do integrante 4]</a> 
-- <a href="#">[Nome do integrante 5]</a>
+- <a href="https://www.linkedin.com/in/leno-siqueira-36789544?utm_source=share_via&utm_content=profile&utm_medium=member_ios">Leno Siqueira</a> — RM: 567893  
+- <a href="https://www.linkedin.com/in/paulo-benfica-76057a7b">Paulo Benfica</a> — RM: 567648  
+- <a href="https://www.linkedin.com/in/federico-villagra-97378838a">Fred Villagra</a> — RM: 567187  
+- <a href="https://www.linkedin.com/in/math-penteado-1b4807200/">Mateus Lima</a> — RM: 568518 
 
 ## 👩‍🏫 Professores:
 ### Tutor(a) 
-- <a href="#">[Nome do Tutor]</a>
+- <a href="https://www.linkedin.com/in/sabrina-otoni-22525519b?utm_source=share_via&utm_content=profile&utm_medium=member_ios/">Sabrina Otoni FIAP</a>
+
 ### Coordenador(a)
-- <a href="#">[Nome do Coordenador]</a>
+- <a href="https://www.linkedin.com/company/inova-fusca/">André Godoi FIAP</a>
 
 
 ## 📜 Descrição
