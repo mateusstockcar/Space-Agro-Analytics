@@ -11,60 +11,70 @@
 
 ---
 
-## 👩🏻‍💻 Sobre este Repositório
+## 🚀 DESTAQUE ATUAL: Global Solution 2026.1 - Space Agro Analytics
 
-Este repositório tem como objetivo centralizar **todos os trabalhos, projetos, desafios, sprints, entregas e experimentos desenvolvidos durante a Graduação ON em Inteligência Artificial da FIAP**.
+**QUERO CONCORRER**
 
-Aqui está documentada minha evolução técnica, analítica e estratégica ao longo do curso, contemplando:
-
-- Projetos acadêmicos (PBLs, Global Solutions, Challenges)
-- Implementações práticas de IA e Machine Learning
-- Modelagem de dados e engenharia de dados
-- Experimentos com Deep Learning
-- Aplicações com IA Generativa
-- Integrações com IoT e sensores
-- Documentações técnicas completas
-- Arquiteturas de solução
-- Estudos dirigidos e explorações técnicas
-- ...
-
-Este repositório funciona como um **portfólio técnico estruturado**, evidenciando domínio progressivo das competências exigidas na formação.
+### 👥 Integrantes da Equipe
+* **Mateus Penteado** - RM: [Inserir RM]
+* **Federico Enrique Villagra** - RM: [Inserir RM]
+* **Leno Siqueira** - RM: [Inserir RM]
+* **Paulo Henrique Benfica** - RM: [Inserir RM]
 
 ---
 
 ## 🎯 Objetivo
 
-Organizar e versionar todo o fluxo de desenvolvimento acadêmico, garantindo:
+Validar e apresentar uma Prova de Conceito (POC) robusta que demonstre como a inteligência artificial e os dados orbitais podem transformar o agronegócio tradicional em um setor preditivo e de alta precisão, garantindo:
 
-- 📌 Organização e rastreabilidade das entregas
-- 📌 Evolução contínua do conhecimento
-- 📌 Documentação clara e técnica
-- 📌 Reprodutibilidade dos experimentos
-- 📌 Portfólio profissional estruturado
+- 📌 Integração de Escalas: Cruzar com precisão dados macro (análise computacional de imagens de satélite) com métricas micro (telemetria de solo via IoT).
+- 📌 Arquitetura Serverless de Ponta a Ponta: Validar um pipeline de dados escalável e de baixa latência utilizando serviços gerenciados da AWS.
+- 📌 Tomada de Decisão em Tempo Real: Disponibilizar inteligência preditiva por meio de um painel analítico voltado para o mercado B2B.
+- 📌 Reprodutibilidade e Rigor Técnico: Assegurar que todo o ecossistema (modelos de IA, firmwares de borda e infraestrutura em nuvem) possa ser replicado através de documentação clara e versionamento limpo.
+
+---
+
+### 🌍 O Projeto
+A **Space Agro Analytics** é uma plataforma preditiva focada em integrar a Nova Economia Espacial com o Agronegócio. Nossa prova de conceito (POC) cruza dados macro (imagens orbitais de satélite) com dados micro (sensores no solo) para identificar anomalias climáticas e estresse hídrico.
+
+---
+
+### 📁 Estrutura da Solução (Diretórios)
+* `/ai`: Modelos de Visão Computacional para análise de índices de vegetação em imagens orbitais.
+* `/cloud`: Infraestrutura AWS (IoT Core, Lambda).
+* `/dashboard`: Interface B2B em Streamlit para visualização dos alertas.
+* `/iot`: Scripts de telemetria (C/C++) para ESP32 e sensores de umidade.
+
+---
+
+### 🎥 Demonstração Prática (Vídeo)
+[🔗 Insira aqui o link do vídeo não-listado no YouTube com a demonstração]
 
 ---
 
 ## 🧠 Estrutura Macro do Repositório
 
 ```bash
-📂 FIAP-GRAD-ON-IA
+📂 Space-Agro-Analytics
 │
-├── 📂 ANO1
-│   ├── 📂 FASE1
-│   │   ├── 📂 NOME-DA-ATIVIDADE1
-│   │   ├── 📂 NOME-DA-ATIVIDADE2
-│   │   ├── 📂 NOME-DA-ATIVIDADE3
-│   ├── 📂 FASE2
-│   ├── 📂 FASE3
-│   └── 📂 ...
+├── 📂 ai            # Inteligência Artificial & Visão Computacional
+│   ├── 📂 notebooks    # Jupyter Notebooks com o processamento de imagens orbitais
+│   └── 📄 readme.md    # Documentação dos modelos (YOLO, índices NDVI e treinamento)
 │
-├── 📂 ANO2
-│   ├── 📂 FASE1
-│   ├── 📂 FASE2
-│   ├── 📂 FASE3
-│   └── 📂 ...
+├── 📂 cloud         # Infraestrutura em Nuvem & Computação Serverless
+│   ├── 📂 lambdas      # Scripts e funções de processamento de dados (AWS Lambda)
+│   └── 📄 readme.md    # Desenho da arquitetura AWS (IoT Core, Banco de Dados, APIs)
 │
-└── README.md
+├── 📂 dashboard     # Interface B2B & Visualização Analítica
+│   ├── 📄 app.py       # Código-fonte da aplicação (Streamlit/Python)
+│   └── 📄 readme.md    # Instruções de implantação e rotas de consumo do painel
+│
+├── 📂 iot           # Engenharia de Borda (Edge Computing)
+│   ├── 📂 firmware     # Códigos em C/C++ para o microcontrolador ESP32
+│   └── 📄 readme.md    # Esquema de ligação dos sensores e payload do protocolo MQTT
+│
+├── 📂 assets        # Identidade visual, diagramas de arquitetura e prints da POC
+└── 📄 README.md     # Documentação principal e vitrine do projeto (este arquivo)
 ```
 
 ---
