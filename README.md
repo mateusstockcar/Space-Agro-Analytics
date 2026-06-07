@@ -16,10 +16,10 @@
 **QUERO CONCORRER**
 
 ### 👥 Integrantes da Equipe
-* **Mateus Penteado** - RM: [Inserir RM]
-* **Federico Enrique Villagra** - RM: [Inserir RM]
-* **Leno Siqueira** - RM: [Inserir RM]
-* **Paulo Henrique Benfica** - RM: [Inserir RM]
+* **Mateus Penteado** - RM: 568518
+* **Federico Enrique Villagra** - RM: 567187
+* **Leno Siqueira** - RM: 567893
+* **Paulo Henrique Benfica** - RM: 567648
 
 ---
 
@@ -48,7 +48,7 @@ A **Space Agro Analytics** é uma plataforma preditiva focada em integrar a Nova
 ---
 
 ### 🎥 Demonstração Prática (Vídeo)
-[🔗 Insira aqui o link do vídeo não-listado no YouTube com a demonstração]
+🔗(https://youtu.be/MRSurJx_MxA)
 
 ---
 
