@@ -48,7 +48,7 @@ A **Space Agro Analytics** é uma plataforma preditiva focada em integrar a Nova
 ---
 
 ### 🎥 Demonstração Prática (Vídeo)
-👉 **[Assistir à Demonstração do TotemMFlex](https://youtu.be/MRSurJx_MxA)**
+👉 **[Assistir à Demonstração do SpaceAgro](https://youtu.be/MRSurJx_MxA)**
 
 ---
 
