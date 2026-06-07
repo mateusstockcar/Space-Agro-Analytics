@@ -17,13 +17,12 @@ st.markdown("""
 st.title("🛰️ Space Agro Analytics")
 st.markdown("### Plataforma de Inteligência Espacial e Telemetria de Solo")
 
-# Botão para simular a chegada de novos dados do IoT
+# Botão de Sincronização
 if st.button("🔄 Sincronizar Dados da Nuvem (AWS IoT Core)"):
-    # Gera pequenas variações para simular leitura em tempo real
-    st.session_state.umidade = round(random.uniform(40.0, 48.0), 1)
+    # Umidade varia entre 30% (muito seco) e 60% (saudável)
+    st.session_state.umidade = round(random.uniform(30.0, 60.0), 1)
     st.session_state.temperatura = round(random.uniform(27.0, 31.0), 1)
 else:
-    # Valores iniciais
     if 'umidade' not in st.session_state: st.session_state.umidade = 45.2
     if 'temperatura' not in st.session_state: st.session_state.temperatura = 28.5
 
@@ -32,10 +31,13 @@ st.divider()
 st.header("📡 Telemetria de Borda em Tempo Real (IoT)")
 col1, col2, col3, col4 = st.columns(4)
 
+# Lógica de Risco baseada na umidade lida pelo sensor
+risco = "ALTO" if st.session_state.umidade < 40 else "MÉDIO" if st.session_state.umidade < 50 else "BAIXO"
+
 col1.metric(label="Status do Sensor", value="Ativo", delta="Conectado")
-col2.metric(label="Umidade do Solo", value=f"{st.session_state.umidade}%", delta="-12.3%", delta_color="inverse")
-col3.metric(label="Temperatura do Solo", value=f"{st.session_state.temperatura} °C", delta="+1.2 °C", delta_color="inverse")
-col4.metric(label="Risco de Estresse Hídrico", value="ALTO", delta="Atenção Requerida", delta_color="inverse")
+col2.metric(label="Umidade do Solo", value=f"{st.session_state.umidade}%", delta="Atualizado", delta_color="off")
+col3.metric(label="Temperatura do Solo", value=f"{st.session_state.temperatura} °C", delta="Atualizado", delta_color="off")
+col4.metric(label="Risco de Estresse Hídrico", value=risco, delta="Atenção Requerida" if risco == "ALTO" else "Estável", delta_color="inverse" if risco == "ALTO" else "normal")
 
 st.divider()
 
@@ -46,8 +48,15 @@ tamanho = (500, 500)
 nir_band = np.random.uniform(0.5, 0.9, tamanho)
 red_band = np.random.uniform(0.1, 0.4, tamanho)
 
-nir_band[200:300, 200:300] = 0.3
-red_band[200:300, 200:300] = 0.6
+# INTEGRAÇÃO IA + IOT: O tamanho da anomalia responde à umidade lida
+# Se a umidade cai, o quadrado da anomalia cresce. Se sobe, ele diminui.
+fator_estresse = int((65.0 - st.session_state.umidade) * 2.5) 
+centro = 250
+raio = max(15, fator_estresse) # Garante um tamanho mínimo visual
+
+# Aplica a anomalia na matriz espacial
+nir_band[centro-raio:centro+raio, centro-raio:centro+raio] = 0.3
+red_band[centro-raio:centro+raio, centro-raio:centro+raio] = 0.6
 
 ndvi = (nir_band - red_band) / (nir_band + red_band)
 
@@ -64,4 +73,9 @@ cbar.ax.tick_params(colors='white')
 
 st.pyplot(fig)
 
-st.error("🚨 **ALERTA DO SISTEMA:** Anomalia hídrica detectada no setor central da lavoura (Coordenadas Espaciais cruzadas com Node IoT 01). Recomendada ativação de irrigação automatizada.")
+if risco == "ALTO":
+    st.error(f"🚨 **ALERTA DO SISTEMA:** Expansão de anomalia hídrica detectada no setor central. Umidade crítica em {st.session_state.umidade}%. Irrigação de emergência recomendada.")
+elif risco == "MÉDIO":
+    st.warning(f"⚠️ **ATENÇÃO:** Índices hídricos caindo (Umidade em {st.session_state.umidade}%). Manter monitoramento via satélite nas próximas 24h.")
+else:
+    st.success(f"✅ **SISTEMA ESTÁVEL:** Umidade do solo adequada ({st.session_state.umidade}%). Nenhuma intervenção necessária no momento.")
